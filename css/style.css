@@ -153,7 +153,18 @@ hr {
     visibility: visible;
 }
 
+.show-side-menu {
+    /* position: fixed; */
+    left: 0 !important;
+}
 
+.body-margin {
+    margin-left: 250px;
+}
+
+.site-wrapper {
+    transition: margin-left 1s;
+}
 
 /*----- HEADER -----*/
 .container-header {
@@ -171,27 +182,28 @@ hr {
 
         .main-menu nav {
             background-color: none;
-            
+            /* position: relative; */
         }
 
-            .main-menu .opened nav {
+            /* .main-menu .opened nav {
                 display: block;
                 position: absolute;
-            } 
+            }  */
             
             .main-menu nav > ul {
                 background-color: var(--fond-sombre);
                 float: left;
                 height: 100vh;
-                min-width: 250px;
+                width: 250px;
                 text-align: left;
-                right: 100%; 
-                
+                left: -250px;
+                transition: left 1s;
+                position: fixed;
             }
 
                 .main-menu ul > li {
                     border-top: 1px solid var(--gris-sombre);
-                    transform: translateX(0, 0);
+                    /* transform: translateX(0, 0); */
                 }
         
             .main-menu nav > ul ul a {
@@ -501,15 +513,10 @@ footer {
 }
 
 /* side div menu mobile */
-.side-div {
+/* .side-div {
     min-width: 250px;
     height: 100vh;
-}
-
-.show-side-menu {
-    position: fixed;
-    left: 0;
-}
+} */
 
 /* Div style for message display */
 .window-black {
@@ -727,6 +734,10 @@ footer {
        padding: 50px 150px;
     }
 
+    .site-wrapper {
+        margin-left: 0px;
+    }
+
     /* -- Menu -- */
     .main-menu {
         position: relative;
@@ -747,13 +758,16 @@ footer {
             display: none;
         }
     
-            .main-menu ul {
+            .main-menu nav > ul  {
                 background-color: var(--fond-clair);
                 display: flex;
                 justify-content: space-between;
-                max-height: 80px;
+                height: 80px;
                 padding-top: 15px;
                 padding-bottom: 15px;
+                float: none;
+                left: 0;
+                position: static;
                 width: 100%;
             }            
 
