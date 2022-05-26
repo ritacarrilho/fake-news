@@ -15,6 +15,6 @@ Project is created with:
 * Javascript
 
 ## Functionalities
-* Menu mobile: open and close with button click
+* Menu mobile: opens and closes with button click
 * Form validation: name, email and message
 * Display of modal window to show success message
